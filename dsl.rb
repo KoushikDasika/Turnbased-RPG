@@ -1,8 +1,5 @@
 require File.expand_path(File.dirname(__FILE__) + "/environment.rb")
 
-connect_database
-create_schema
-
 class Dsl
   puts "Shining Force Remake"
 
