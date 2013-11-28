@@ -1,7 +1,7 @@
 require File.expand_path(File.dirname(__FILE__) + "/environment.rb")
 
 class Dsl
-  puts "Shining Force Remake"
+  puts "Turnbased RPG"
 
   @map = Map.new
 
