@@ -1,7 +1,7 @@
-require File.expand_path("../shining/spec/spec_helper.rb")
+require_relative "../spec_helper"
 
 describe "Character" do
-  it "should create character" do
+  it "should create character", :focus do
     character = Character.new
     character.should be_true
   end

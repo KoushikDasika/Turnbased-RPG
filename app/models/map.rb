@@ -1,11 +1,16 @@
 class Map
-  attr_accessor :name
+  attr_accessor :name, :field
 
-  def generate_map
-    @map = self.tiles.sort! {|a,b| a.x * 10 + a.y <=> b.x * 10 + b.y}
+  def initialize
+    @field = initialize_field
   end
 
-  def print_field
-    puts @field.to_s
+  def initialize_field
+    (0..10).map {|i|
+      @field[i] = []
+      (0..10).map {|j|
+        @field << Tile.new(i, j)
+      }
+    }
   end
 end
