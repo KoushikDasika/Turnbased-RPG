@@ -1,12 +1,12 @@
-require File.expand_path("../shining/spec/spec_helper.rb")
+require_relative "../spec_helper"
 
 describe "Map" do
   before(:all) do
+    @map = Map.new
 
   end
 
   it "should create map" do
-    @map = FactoryGirl.build(:map)
     @map.should be_true
   end
 

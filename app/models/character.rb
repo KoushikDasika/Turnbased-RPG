@@ -1,5 +1,5 @@
 class Character
-  attr_accessor :name,:level, :stats, :x, :y
+  attr_accessor :name,:level, :stats, :x, :y, :exp
 
   def initialize(opts={})
     opts.each_pair {|key, value| send("#{key}=", value)}
@@ -18,7 +18,7 @@ class Character
     @y = y
   end
 
-  def do_attack
-    @attack
+  def gain_experience(amount)
+    @exp += amount
   end
 end

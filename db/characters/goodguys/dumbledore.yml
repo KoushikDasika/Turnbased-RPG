@@ -1,5 +1,6 @@
 name: Dumbledore
 level: 5
+exp: 0
 stats:
   max_health: 200
   health: 200
