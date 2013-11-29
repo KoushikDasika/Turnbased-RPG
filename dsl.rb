@@ -23,6 +23,7 @@ class Dsl
 
     case input
     when 1
+      battle = Battle.new("db/characters/goodguys/", "db/characters/badguys/")
     when 6
     else
       puts "Invalid input"

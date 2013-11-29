@@ -1,14 +1,14 @@
 name: Villain
 level: 5
 stats:
-	max_health: 200
-	health: 200
-	magic_points: 100
-	attack: 100
-	defense: 100
-	special_attack: 100
-	special_defense: 100
-	move: 5
-	evasion: 100
-	speed: 100
-	luck: 100
+  max_health: 200
+  health: 200
+  magic_points: 100
+  attack: 100
+  defense: 100
+  special_attack: 100
+  special_defense: 100
+  move: 5
+  evasion: 100
+  speed: 100
+  luck: 100
