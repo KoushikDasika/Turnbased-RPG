@@ -1,9 +1,5 @@
 class Character
-  attr_accessor :name,:level, :max_health,
-    :health,:magic_points,
-    :attack,:defense,:special_attack,
-    :special_defense,:move,:evasion,
-    :speed,:luck, :x, :y
+  attr_accessor :name,:level, :stats, :x, :y
 
   def initialize(opts={})
     opts.each_pair {|key, value| send("#{key}=", value)}
