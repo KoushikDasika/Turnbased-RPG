@@ -11,7 +11,6 @@ class Dsl
     "6) Quit"
   ]
 
-
   while input != 6
     puts "\nMenu"
 
