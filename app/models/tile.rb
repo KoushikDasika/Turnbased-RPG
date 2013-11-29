@@ -1,5 +1,5 @@
 class Tile
-  attr_accessor :x, :y, :is_empty?
+  attr_accessor :x, :y, :is_empty
 
   def initialize(x, y)
     @x = x

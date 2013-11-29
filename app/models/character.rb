@@ -21,4 +21,8 @@ class Character
     @x = x
     @y = y
   end
+
+  def do_attack
+    @attack
+  end
 end

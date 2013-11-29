@@ -1,9 +1,8 @@
 require File.expand_path(File.dirname(__FILE__) + "/environment.rb")
+Dir[File.dirname(__FILE__) + 'db/characters/*.rb'].each {|file| YAML.load_file(file.path) }
 
 class Dsl
   puts "Turnbased RPG"
-
-  @map = Map.new
 
   input = ""
 
@@ -25,11 +24,9 @@ class Dsl
 
     case input
     when 1
-      @map.print_field
     when 6
     else
       puts "Invalid input"
     end
   end
 end
-
