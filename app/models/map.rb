@@ -1,16 +1,16 @@
 class Map
-  attr_accessor :name, :field
+  attr_accessor :name, :layout
 
   def initialize(first_army, second_army)
-    @field = initialize_field
+    @layout = initialize_field
   end
 
   def initialize_field
-    @field = []
+    @layout = []
     (0..10).map {|i|
-      @field[i] = []
+      @layout[i] = []
       (0..10).map {|j|
-        @field << Tile.new(i, j)
+        @layout << Tile.new(i, j)
       }
     }
   end

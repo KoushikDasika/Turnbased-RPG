@@ -1,6 +1,6 @@
 require_relative "../spec_helper"
 
-describe "Character" do
+describe Character do
   before(:all) do
     @attributes = {
       name: "Koushik",

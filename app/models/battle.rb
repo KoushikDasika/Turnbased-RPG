@@ -1,9 +1,9 @@
 class Battle
-  attr_accessor :first_army, :second_army, :turn_list, :map
+  attr_accessor :first_army, :second_army, :turn_list, :land
 
   def initialize(first_army, second_army)
     @first_army, @second_army, @turn_list = initialize_armies(first_army, second_army)
-    @map = Map.new(@first_army, @second_army)
+    @map = Map.new
   end
 
   def initialize_armies(first_army, second_army)
