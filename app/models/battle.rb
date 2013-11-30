@@ -11,7 +11,7 @@ class Battle
     second_army = Army.new
     first_army.load_characters(first_army)
     second_army.load_characters(second_army)
-    turn_list = Army.combine_armies(first_army, second_army) .sort {|x,y|
+    turn_list = Army.combine_armies(first_army, second_army).sort {|x,y|
       y.stats["speed"] <=> x.stats["speed"]
     }
     [first_army, second_army, turn_list]

@@ -1,6 +1,9 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    activesupport (3.2.13)
+      i18n (= 0.6.1)
+      multi_json (~> 1.0)
     byebug (2.3.1)
       columnize (~> 0.3.6)
       debugger-linecache (~> 1.2.0)
@@ -8,6 +11,8 @@ GEM
     columnize (0.3.6)
     debugger-linecache (1.2.0)
     diff-lcs (1.2.4)
+    factory_girl (4.2.0)
+      activesupport (>= 3.0.0)
     ffi (1.9.0)
     formatador (0.2.4)
     guard (1.8.1)
@@ -19,12 +24,14 @@ GEM
     guard-rspec (3.0.2)
       guard (>= 1.8)
       rspec (~> 2.13)
+    i18n (0.6.1)
     listen (1.2.2)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
       rb-kqueue (>= 0.2)
     lumberjack (1.0.3)
     method_source (0.8.1)
+    multi_json (1.8.0)
     pry (0.9.12.2)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
@@ -50,5 +57,6 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
+  factory_girl
   guard-rspec
   rspec

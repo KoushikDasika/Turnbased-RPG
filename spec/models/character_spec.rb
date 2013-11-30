@@ -22,12 +22,12 @@ describe Character do
   end
 
   it "should create character" do
-    character = Character.new
+    character = FactoryGirl.build(:character)
     character.should be_true
   end
 
   it "should instantiate a character with the passed in parameters" do
-    koushik = Character.new(@attributes)
+    koushik = FactoryGirl.build(:character)
     @attributes.each_pair do |key, value|
       koushik.send(key).should == value
     end
