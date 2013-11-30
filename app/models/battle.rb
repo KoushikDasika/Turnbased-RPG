@@ -8,10 +8,9 @@ class Battle
   end
 
   def initialize_armies(first_army, second_army)
-    first_army.load_characters(first_army)
-    second_army.load_characters(second_army)
-    turn_list = generate_turn_list
-    [first_army, second_army, turn_list]
+    @first_army.load_characters(first_army)
+    @second_army.load_characters(second_army)
+    @turn_list = generate_turn_list
   end
 
   def generate_turn_list

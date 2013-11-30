@@ -11,7 +11,7 @@ class Dsl
     "6) Quit"
   ]
 
-  while input != 6
+  while true
     puts "\nMenu"
 
     options.each do |option|
@@ -23,8 +23,10 @@ class Dsl
 
     case input
     when 1
-      battle = Battle.new("db/characters/goodguys/", "db/characters/badguys/")
+      game = Game.new
+      game.start_game
     when 6
+      break
     else
       puts "Invalid input"
     end

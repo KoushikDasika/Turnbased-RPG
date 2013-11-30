@@ -16,10 +16,10 @@ class Army
   end
 
   def load_characters(army_list)
-    Dir.entries(army_list).drop(2).map { |x|
-      filepath = "#{army_list}#{x}"
+    army_list.each do |member|
+      filepath = "db/characters/#{member}.yml"
       attributes = YAML.load_file(filepath)
       @character_list << Character.new(attributes)
-    }
+    end
   end
 end

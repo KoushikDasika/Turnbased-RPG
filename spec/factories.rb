@@ -61,4 +61,7 @@ FactoryGirl.define do
 
     after(:build) {|battle| battle.generate_turn_list}
   end
+
+  factory :game do
+  end
 end
