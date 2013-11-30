@@ -4,7 +4,7 @@ FactoryGirl.define do
   factory :character do
     level 1
     exp 0
-    stats {{
+    sequence(:stats) { |n| {
       :health => 100,
       :magic_points => 100,
       :attack => 100,
@@ -12,7 +12,7 @@ FactoryGirl.define do
       :special_attack => 100,
       :special_defense => 100,
       :evasion => 100,
-      :speed => 100,
+      :speed => n,
       :luck => 100,
       :move => 5
     }}
@@ -26,24 +26,24 @@ FactoryGirl.define do
     end
   end
 
-  factory :army do |a|
+  factory :army do
     character_list []
 
-
     factory :good_guys do
-      character_list {[
-        association(:hero, strategy: :build),
-        association(:hero, strategy: :build, name: "BillyBob"),
-        association(:hero, strategy: :build, name: "Dumbledore")
-      ]}
+      after(:build){|army|
+        3.times { army.character_list << build(:hero) }
+      }
     end
 
     factory :bad_guys do
-      character_list {[
-        association(:villain, strategy: :build),
-        association(:villain, strategy: :build),
-        association(:villain, strategy: :build)
-      ]}
+      after(:build){|army|
+        3.times { army.character_list << build(:villain) }
+      }
     end
+  end
+
+  factory :battle do
+
+
   end
 end
