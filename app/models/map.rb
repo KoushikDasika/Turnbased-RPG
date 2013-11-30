@@ -1,7 +1,7 @@
 class Map
   attr_accessor :name, :layout
 
-  def initialize(first_army, second_army)
+  def initialize
     @layout = initialize_field
   end
 

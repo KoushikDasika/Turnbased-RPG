@@ -1,14 +1,13 @@
 class Battle
   attr_accessor :first_army, :second_army, :turn_list, :land
 
-  def initialize(first_army, second_army)
-    @first_army, @second_army, @turn_list = initialize_armies(first_army, second_army)
+  def initialize
+    @first_army = Army.new
+    @second_army = Army.new
     @land = Map.new
   end
 
   def initialize_armies(first_army, second_army)
-    first_army = Army.new
-    second_army = Army.new
     first_army.load_characters(first_army)
     second_army.load_characters(second_army)
     turn_list = generate_turn_list

@@ -42,8 +42,23 @@ FactoryGirl.define do
     end
   end
 
+  factory :tile do
+    sequence(:x, 0) {|n| n / 10}
+    sequence(:y, 0) {|n| n % 10}
+    is_empty true
+    resistance = 0
+  end
+
+  factory :map do
+    name "First map"
+    layout { build_list(:tile, 100)}
+  end
+
   factory :battle do
+    association :first_army, factory: :good_guys, strategy: :build
+    association :second_army, factory: :bad_guys, strategy: :build
+    association :land, factory: :map, strategy: :build
 
-
+    after(:build) {|battle| battle.generate_turn_list}
   end
 end
