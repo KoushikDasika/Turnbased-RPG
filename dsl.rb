@@ -7,7 +7,7 @@ class Dsl
   input = ""
 
   options = [
-    "1) Print World",
+    "1) Start Game",
     "6) Quit"
   ]
 

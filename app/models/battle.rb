@@ -20,5 +20,11 @@ class Battle
   end
 
   def start_battle
+    #render field with characters on respective side
+    #while there are still characters
+    #for each character, move them and then settle them down
+  end
+
+  def render_battlefield
   end
 end

@@ -8,8 +8,7 @@ class Game
 
     battle = Battle.new
     battle.initialize_armies(current_battle[:good_guys], current_battle[:bad_guys])
-    byebug
-    puts "yay"
+    battle.start_battle
   end
 
   def load_current_battle(save_state)
@@ -21,6 +20,5 @@ class Game
   end
 
   def get_current_battle
-
   end
 end
